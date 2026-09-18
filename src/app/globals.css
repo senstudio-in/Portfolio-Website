@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: #050505;
+  --color-page: #242424;
+  --color-card: #1f1f1f;
+  --color-brand: #80120e;
+  --color-brand-card: #81130f;
+  --color-brand-dark: #521212;
+  --color-muted: #a6a6a6;
+  --color-whatsapp: #25d366;
+
+  --font-bogle: var(--font-bbh-bogle);
+  --font-sans: var(--font-google-sans-flex);
+  --font-inter: var(--font-inter);
+  --font-inter-display: var(--font-inter-display);
+  --font-condensed: var(--font-roboto-condensed);
+  --font-space-mono: var(--font-space-mono);
+  --font-dm-mono: var(--font-dm-mono);
+  --font-bebas: var(--font-bebas-neue);
+  --font-poppins: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #fff;
+  font-family: var(--font-google-sans-flex), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.missing-image {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='126'%3E%3Cpath d='M126 0v21.584L21.584 126H0v-17.585L108.415 0H126Zm0 108.414V126h-17.586L126 108.414Zm0-84v39.171L63.585 126H24.414L126 24.414Zm0 42v39.17L105.584 126h-39.17L126 66.414ZM105.586 0 0 105.586V66.415L66.415 0h39.171Zm-42 0L0 63.586V24.415L24.415 0h39.171Zm-42 0L0 21.586V0h21.586Z' fill='rgba(136,136,136,0.2)' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 64px auto;
+}
+
+.edge-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 12.5%,
+    #000 87.5%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
