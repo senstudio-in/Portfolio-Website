@@ -169,7 +169,8 @@ export const projects: Project[] = [
       s("j9mlms1dxpFnITjGxAYP204Waw.jpg", 1292, 928, "cover"),
       s("UmCgoOg2O2YFxAGjBECEdsGinSc.jpg", 1292, 862, "cover"),
     ],
-    episode3: s("tgif-hyderabad-episode-3.jpg", 1920, 1080, "cover"),
+    // Match the surrounding episode panels so this insert keeps the same side padding.
+    episode3: s("tgif-hyderabad-episode-3.jpg", 1080, 608, "cover"),
     process: {
       heading: "The Creative Process",
       body: [
