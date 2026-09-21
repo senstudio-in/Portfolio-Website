@@ -238,17 +238,17 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         ))
       )}
 
-      {!isChelsea && (suppressEmptyBanners ? [b1, b2].filter((b) => b.src) : [b1, b2]).map((b, i) => (
-        <Reveal key={`b${i}`} className="flex w-full justify-center" amount={0.1}>
-          <SlotImage slot={b} alt={`${project.title} — banner ${i + 1}`} />
-        </Reveal>
-      ))}
-
       {project.episode3 && (
         <Reveal className="flex w-full justify-center" amount={0.1}>
           <SlotImage slot={project.episode3} alt={`${project.title} — Hyderabad episode 3 thumbnail`} />
         </Reveal>
       )}
+
+      {!isChelsea && (suppressEmptyBanners ? [b1, b2].filter((b) => b.src) : [b1, b2]).map((b, i) => (
+        <Reveal key={`b${i}`} className="flex w-full justify-center" amount={0.1}>
+          <SlotImage slot={b} alt={`${project.title} — banner ${i + 1}`} />
+        </Reveal>
+      ))}
 
       {project.legends && (
         <section className="flex w-full max-w-[1292px] flex-col gap-5">
@@ -263,7 +263,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         </section>
       )}
 
-      {!isChelsea && !isTGIF && (project.process ? (
+      {!isChelsea && (project.process ? (
         <section
           className={`flex w-full flex-col items-center gap-10 py-[100px] text-center ${
             project.slug === "tgif" ? "max-w-[860px]" : "max-w-[927px] md:flex-row md:items-center md:gap-[100px] md:text-left"
@@ -300,15 +300,6 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
           </Reveal>
         ))
       ))}
-
-      {isTGIF && project.process && (
-        <section className="flex w-full max-w-[860px] flex-col items-center gap-10 py-[100px] text-center">
-          <h2 className="font-bebas text-[48px] leading-none tracking-[-0.66px] text-white md:text-[72px]">
-            {project.process.heading}
-          </h2>
-          <Paragraphs text={project.process.body} className={`${body} w-full max-w-[760px] items-center text-center`} />
-        </section>
-      )}
 
       {project.slug === "tgif" && (
         <div className="grid w-full max-w-[887px] grid-cols-2 gap-4 md:grid-cols-3">
