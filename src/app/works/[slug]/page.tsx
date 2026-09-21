@@ -411,7 +411,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         </section>
       )}
 
-      <nav aria-label="More work" className={`flex w-full items-center justify-between ${hasLargeWorkNav ? "max-w-[927px]" : "max-w-[600px]"} ${body}`}>
+      <nav aria-label="More work" className={`flex w-full flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-0 ${hasLargeWorkNav ? "max-w-[927px]" : "max-w-[600px]"} ${body}`}>
         {prev ? (
           <Link href={`/works/${prev.slug}`} className="py-3 transition-opacity hover:opacity-60">
             ‹ {prev.title}

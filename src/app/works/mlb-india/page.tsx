@@ -10,7 +10,7 @@ export default function MlbIndiaPage() {
         <h1 className="text-[40px] font-bold leading-[1.1] tracking-[-0.04em] text-white md:text-[56px]">MLB India</h1>
       </header>
 
-      <nav aria-label="More work" className="flex w-full max-w-[927px] items-center justify-between text-[16px] leading-[25.6px] tracking-[-0.32px] text-white">
+      <nav aria-label="More work" className="flex w-full max-w-[927px] flex-col items-start gap-4 text-[16px] leading-[25.6px] tracking-[-0.32px] text-white md:flex-row md:items-center md:justify-between md:gap-0">
         <Link href="/works/liv-golf" className="py-3 transition-opacity hover:opacity-60">
           ‹ LIV GOLF
         </Link>

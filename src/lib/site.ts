@@ -61,7 +61,7 @@ export const testimonials = [
   {
     quote:
       "The best art director a designer could ask for. Someone with a clear vision of what he wants to make and an incredibly refined palate to go with it. I've learnt a great deal working with someone so experienced.",
-    name: "Parinith Ramakrishnan",
+    name: "Parinith Ramakrishna",
     company: "Designer",
     avatar: img("parinith-ramakrishnan.png"),
   },

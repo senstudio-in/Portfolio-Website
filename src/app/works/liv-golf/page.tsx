@@ -33,7 +33,7 @@ export default function LivGolfPage() {
         The creative direction draws on cultural references and the character of each host location, connecting the campaign to where every event takes place. Each composition spotlights three key players from their teams, bringing the energy and identity of the tournament into focus.
       </p>
 
-      <nav aria-label="More work" className="flex w-full max-w-[927px] items-center justify-between text-[16px] leading-[25.6px] tracking-[-0.32px] text-white">
+      <nav aria-label="More work" className="flex w-full max-w-[927px] flex-col items-start gap-4 text-[16px] leading-[25.6px] tracking-[-0.32px] text-white md:flex-row md:items-center md:justify-between md:gap-0">
         <Link href="/works/mlb-india" className="py-3 transition-opacity hover:opacity-60">
           ‹ MLB India
         </Link>

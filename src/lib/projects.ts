@@ -111,7 +111,7 @@ export const projects: Project[] = [
       subtitle: "2024–2025",
       credit: "Via **Sportfolio Productions**",
       description:
-        "I led the art direction for Sevilla FC’s Virtual Tour in India, creating a matchday campaign that placed the club and its players within the country’s varied locations, cultures and traditions. Each creative brought the Sevilla experience closer to Indian fans, imagining the players exploring, celebrating and enjoying the places they visited. I led the project from concept through execution, collaborating with Arka Das, Parinith Ramakrishnan, Atharva Deodhar, Zekki, Ronit and Kiran.",
+        "I led the art direction for Sevilla FC’s Virtual Tour in India, creating a matchday campaign that placed the club and its players within the country’s varied locations, cultures and traditions. Each creative brought the Sevilla experience closer to Indian fans, imagining the players exploring, celebrating and enjoying the places they visited. I led the project from concept through execution, collaborating with Arka Das, Parinith Ramakrishna, Atharva Deodhar, Zekki, Ronit and Kiran.",
       featured: [img("sevilla-2024-25/global-gfx-3.jpeg"), img("sevilla-2024-25/global-gfx-1.png")],
       gallery: [
         "md-01-athletic-club.png",
@@ -156,7 +156,7 @@ export const projects: Project[] = [
     lead: s("2FK9vfHk2pgqFApqgDUI623uSLk.jpg", 1080, 776),
     intro: [
       "TGIF is a passion-driven project and the brainchild of **Johnson Kanjirathingal**, born out of a genuine love for Indian football. I came onto the project at a stage where there were a lot of ideas, but nothing really connecting the dots yet. I was brought in to art direct the project and take care of the overall design and animation direction.",
-      "I worked closely with **Parinith Ramakrishnan**, who was the designer for the project. I started by creating the brand guidelines, which then became the foundation for developing all the visual assets with **Parinith Ramakrishnan**. I also created the intro for the series frame by frame. **Wayne**, our motion designer, worked on most of the animations and also helped bring parts of the intro to life.",
+      "I worked closely with **Parinith Ramakrishna**, who was the designer for the project. I started by creating the brand guidelines, which then became the foundation for developing all the visual assets with **Parinith Ramakrishna**. I also created the intro for the series frame by frame. **Wayne**, our motion designer, worked on most of the animations and also helped bring parts of the intro to life.",
       "What made this project particularly special was how involved I was across the entire process, from defining the visual identity to designing and animating the final pieces. It was one of the most unique projects I’ve ever been a part of, and one that came from a genuine passion for Indian football.",
     ].join("\n\n"),
     gallery: [
@@ -212,7 +212,7 @@ export const projects: Project[] = [
     title: "Roots to Boots",
     thumbnail: img("roots-to-boots-wordmark.png"),
     tag: "Branding",
-    subtitle: "Branding project with **Parinith Ramakrishnan**\nPodcast Series for Sportfolio production",
+    subtitle: "Branding project with **Parinith Ramakrishna**\nPodcast Series for Sportfolio production",
     meta: "2026",
     lead: s("roots-to-boots-wordmark.png", 4152, 2224, "cover"),
     intro: "",
