@@ -26,7 +26,7 @@ export default function SlotImage({
         fill
         priority={priority}
         unoptimized={slot.animated || slot.src.endsWith(".gif")}
-        quality={100}
+        quality={90}
         sizes={`(min-width: ${slot.w + 150}px) ${slot.w}px, 100vw`}
         decoding="async"
         className={slot.fit === "cover" ? "object-cover" : "object-contain"}

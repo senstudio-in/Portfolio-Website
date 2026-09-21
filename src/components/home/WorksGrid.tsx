@@ -22,11 +22,12 @@ export default function WorksGrid() {
       transition={{ type: "spring", stiffness: 130, damping: 30, mass: 0.1, delay: 1 }}
     >
       <div className="grid w-full max-w-[1442px] grid-cols-1 gap-x-5 gap-y-[60px] py-10 md:grid-cols-[repeat(2,minmax(0,611px))] md:justify-center md:px-[99px] md:py-[60px] min-[1920px]:max-w-none min-[1920px]:grid-cols-[repeat(2,minmax(0,860px))]">
-        {homepageProjects.map((p) => (
+        {homepageProjects.map((p, i) => (
           <WorkCard
             key={p.slug}
             project={p}
-            displayTitle={p.slug === "tgif" ? "Traveler's Guide to India" : undefined}
+            displayTitle={p.slug === "tgif" ? "Travellers' Guide to India" : undefined}
+            priority={i < 2}
           />
         ))}
         <MoreProjectsCard />

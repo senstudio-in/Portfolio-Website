@@ -5,7 +5,7 @@ import { ScrollWords } from "../Reveal";
 import { images } from "@/lib/site";
 
 const bio =
-  "Arghya Sen is a Bengaluru Based Artist, Originally From West Bengal. He Specializes in Visual Storytelling through multi-diciplinery Art Forms , Creating Content for Brands, Artists, and Creative Projects.";
+  "Arghya Sen is a Bengaluru Based Artist, Originally From West Bengal. He Specializes in Visual Storytelling through multi-disciplinary Art Forms , Creating Content for Brands, Artists, and Creative Projects.";
 
 export default function AboutBlurb() {
   return (

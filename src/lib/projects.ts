@@ -148,7 +148,7 @@ export const projects: Project[] = [
   },
   {
     slug: "tgif",
-    title: "Traveler's Guide to India",
+    title: "Travellers' Guide to India",
     thumbnail: img("2FK9vfHk2pgqFApqgDUI623uSLk.jpg"),
     tag: "Art Directing & Branding",
     subtitle: "TRVAELLERS GUIDE TO INDIAN FOOTBALL",

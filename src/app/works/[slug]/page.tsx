@@ -305,7 +305,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         <div className="grid w-full max-w-[887px] grid-cols-2 gap-4 md:grid-cols-3">
           {project.grid.map((src, i) => (
             <ExpandableImage key={src} src={src} alt={`${project.title} — creative ${i + 1}`} className="relative aspect-[285/200] w-full overflow-hidden rounded-[8px] bg-[#eee]">
-              <Image src={src} alt="" fill quality={100} sizes="285px" decoding="async" className="object-cover" />
+              <Image src={src} alt="" fill quality={90} sizes="285px" decoding="async" className="object-cover" />
             </ExpandableImage>
           ))}
         </div>
@@ -330,7 +330,6 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
                   src={src}
                   alt={`${project.title} — featured creative ${i + 1}`}
                   fill
-                  unoptimized
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
@@ -347,7 +346,6 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
                   src={src}
                   alt={`${project.title} — matchday creative ${i + 1}`}
                   fill
-                  unoptimized
                   sizes="(min-width: 768px) 25vw, 50vw"
                   className="object-cover"
                 />
@@ -384,7 +382,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
               src={project.trophyTour[3]}
               alt="ICC Trophy Tour — Pakistan"
               fill
-              quality={100}
+              quality={90}
               sizes="(min-width: 1024px) 900px, 100vw"
               decoding="async"
               className="object-contain"
@@ -402,7 +400,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
                   src={src}
                   alt={`ICC Trophy Tour creative ${i + 1}`}
                   fill
-                  quality={100}
+                  quality={90}
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   decoding="async"
                   className="object-contain"

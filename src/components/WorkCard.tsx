@@ -7,11 +7,13 @@ export default function WorkCard({
   displayTitle,
   showTag = false,
   aspect = "611/453",
+  priority = false,
 }: {
   project: Project;
   displayTitle?: string;
   showTag?: boolean;
   aspect?: string;
+  priority?: boolean;
 }) {
   const title = displayTitle ?? project.title;
 
@@ -39,6 +41,7 @@ export default function WorkCard({
           src={project.thumbnail}
           alt={project.title}
           fill
+          priority={priority}
           sizes="(min-width: 768px) 611px, 100vw"
           className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.44,0,0.56,1)] group-hover:scale-[1.06]"
         />

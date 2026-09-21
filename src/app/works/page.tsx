@@ -11,7 +11,7 @@ export default function WorksPage() {
       <div className="grid w-full max-w-[1280px] grid-cols-1 min-[1920px]:max-w-[1740px] gap-x-5 gap-y-[60px] md:grid-cols-2">
         {projects.filter((p) => p.listed !== false).map((p, i) => (
           <Reveal key={p.slug} y={40} delay={(i % 2) * 0.1} amount={0.2}>
-            <WorkCard project={p} aspect="630/467" />
+            <WorkCard project={p} aspect="630/467" priority={i < 2} />
           </Reveal>
         ))}
         <Reveal y={40} amount={0.2}>
