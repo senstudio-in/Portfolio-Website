@@ -359,7 +359,7 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         <section className="flex w-full max-w-[600px] flex-col gap-8 py-8">
           {project.testimonials.map((testimonial) => (
             <blockquote key={testimonial.attribution} className="flex flex-col gap-3 border-l border-white/30 pl-5">
-              <p className={body}>“{testimonial.quote}”</p>
+              <p className={`${body} whitespace-pre-line`}>“{testimonial.quote}”</p>
               <footer className="text-[14px] leading-[22px] text-[#999]">{testimonial.attribution}</footer>
             </blockquote>
           ))}

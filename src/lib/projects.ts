@@ -133,9 +133,9 @@ export const projects: Project[] = [
     },
     testimonials: [
       {
-        attribution: "Sevilla FC · Placeholder testimonial",
+        attribution: "Rocío Pérez, Brand and Internal Communications Director, Sevilla FC",
         quote:
-          "Working on the Virtual Tour was a genuinely collaborative and exciting process. The campaign created a distinctive way to connect Sevilla FC with supporters across India.",
+          "We would like to recognize and thank Sportfolio for the quality of their work throughout our collaboration in India. We particularly valued the strength of their creative proposals, their consistent involvement with the client, and their proactive approach in supporting the project.\n\nTheir knowledge of football, together with their ability to understand, respect, and accurately represent our brand for the Indian audience, was one of the most valuable aspects of this collaboration. For us, it was especially important to work with a partner capable of interpreting our identity with sensitivity and translating it into the local market with coherence and good judgment.\n\nWe sincerely appreciate the work we have shared and hope to have the opportunity to collaborate again in the future.",
       },
       {
         attribution: "Johnson Kanjirathingal, Founder, Sportfolio Productions LLP",
