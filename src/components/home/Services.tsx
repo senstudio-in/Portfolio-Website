@@ -9,7 +9,7 @@ export default function Services() {
       aria-label="Services"
       className="flex w-full flex-col justify-center gap-[27px] px-5 pb-[105px] pt-[26px] md:px-10"
     >
-      <p className="text-center text-[18px] leading-[28.8px] text-muted">Services That I Offer</p>
+      <h2 className="text-center text-[28px] font-bold leading-none tracking-[-0.04em] text-white md:text-[36px]">SERVICES</h2>
 
       <div className="flex flex-col items-center justify-center gap-[21px] overflow-clip">
         {services.map((s, i) => (

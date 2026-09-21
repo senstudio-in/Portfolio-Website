@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import Image from "next/image";
 import Marquee from "./Marquee";
 import RollText from "./RollText";
 import { Banner } from "./Header";
-import { footerBannerText, navLinks, socialLinks } from "@/lib/site";
+import { footerBannerText, navLinks } from "@/lib/site";
 
 function WhatsAppGlyph({ className = "" }: { className?: string }) {
   return (
@@ -44,55 +44,148 @@ export default function Footer() {
   return (
     <footer className="relative z-0 flex w-full flex-col items-center gap-[54px] overflow-clip bg-black">
       <div className="flex w-full flex-col gap-12 px-[25px] py-[49px] md:flex-row md:items-center md:justify-between md:gap-0">
-        <div className="flex items-center gap-[25px] md:pl-[50px]">
-          <Link
-            href="/"
-            aria-label="Chat on WhatsApp"
-            className="group relative flex h-[63px] w-[66px] shrink-0 items-center justify-center overflow-hidden rounded-[6px] bg-whatsapp outline-none transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(37,211,102,0.55)] focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95"
-          >
-            <span className="grid h-6 w-6 overflow-hidden">
-              <WhatsAppGlyph className="h-6 w-6 text-white transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:-translate-y-full" />
-              <WhatsAppGlyph className="h-6 w-6 translate-y-full text-white transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:translate-y-0" />
-            </span>
-          </Link>
-          <div className="font-bogle text-[17px] uppercase leading-[20.4px] text-muted">
-            <p>unlock conversations</p>
-            <p>&amp; designs</p>
+        <div className="flex flex-col gap-6 md:pl-[50px]">
+          <div className="flex flex-col gap-6 md:flex-row md:gap-[64px]">
+            <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-[25px]">
+            <Link
+              href="https://wa.me/918928768546"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="group relative flex h-[63px] w-[66px] shrink-0 items-center justify-center overflow-hidden rounded-[6px] bg-whatsapp outline-none transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(37,211,102,0.55)] focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95"
+            >
+              <span className="grid h-6 w-6 overflow-hidden">
+                <WhatsAppGlyph className="h-6 w-6 text-white transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:-translate-y-full" />
+                <WhatsAppGlyph className="h-6 w-6 translate-y-full text-white transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:translate-y-0" />
+              </span>
+            </Link>
+            <div className="font-bogle text-[17px] uppercase leading-[20.4px] text-muted">
+              <p>unlock conversations</p>
+              <p>&amp; designs</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-[25px]">
+            <Link
+              href="https://www.instagram.com/senstudio.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Instagram"
+              className="group relative flex h-[63px] w-[66px] shrink-0 items-center justify-center overflow-hidden rounded-[6px] outline-none transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(214,54,143,0.55)] focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95"
+            >
+              <Image
+                src="/images/instagram-gradient-background.png"
+                alt=""
+                fill
+                sizes="66px"
+                className="object-cover"
+              />
+              <span className="relative z-[1] grid h-6 w-6 overflow-hidden">
+                <Image
+                  src="/images/instagram-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:-translate-y-full"
+                />
+                <Image
+                  src="/images/instagram-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 translate-y-full transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:translate-y-0"
+                />
+              </span>
+            </Link>
+            <p className="font-bogle text-[17px] uppercase leading-[20.4px] text-muted">Slide in my DMs!</p>
+          </div>
+            </div>
+            <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-[25px]">
+            <Link
+              href="https://x.com/senstudio_in"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="group relative flex h-[63px] w-[66px] shrink-0 items-center justify-center overflow-hidden rounded-[6px] bg-white outline-none transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(255,255,255,0.35)] focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95"
+            >
+              <span className="relative z-[1] grid h-6 w-6 overflow-hidden">
+                <Image
+                  src="/images/x-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 object-contain invert transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:-translate-y-full"
+                />
+                <Image
+                  src="/images/x-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 translate-y-full object-contain invert transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:translate-y-0"
+                />
+              </span>
+            </Link>
+            <p className="font-bogle text-[17px] uppercase leading-[20.4px] text-muted">I mostly don&apos;t use it.</p>
+          </div>
+          <div className="flex items-center gap-[25px]">
+            <Link
+              href="https://www.linkedin.com/in/arghyasen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="group relative flex h-[63px] w-[66px] shrink-0 items-center justify-center overflow-hidden rounded-[6px] outline-none transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(14,118,168,0.55)] focus-visible:ring-2 focus-visible:ring-white/70 active:scale-95"
+            >
+              <Image src="/images/linkedin-background.png" alt="" fill sizes="66px" className="object-cover" />
+              <span className="relative z-[1] grid h-6 w-6 overflow-hidden">
+                <Image
+                  src="/images/linkedin-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 object-contain transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:-translate-y-full"
+                />
+                <Image
+                  src="/images/linkedin-white-icon.png"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 translate-y-full object-contain transition-transform duration-[450ms] ease-[cubic-bezier(0.44,0,0.56,1)] [grid-area:1/1] group-hover:translate-y-0"
+                />
+              </span>
+            </Link>
+            <p className="max-w-[220px] font-bogle text-[17px] uppercase leading-[20.4px] text-muted">Sometimes when I&apos;m bored, I use it.</p>
+          </div>
+            </div>
           </div>
         </div>
 
-        <div className="flex gap-16 lg:gap-[122px] xl:pl-[300px]">
+        <div className="md:pr-[50px]">
           <div className="flex flex-col justify-center lg:gap-[10px]">
             <p className="mb-1 font-bogle text-[21px] uppercase leading-[25.2px] text-muted lg:mb-0">Navigations</p>
-            {navLinks.map((l) => (
+            {navLinks.filter((l) => l.href !== "/").map((l) => (
               <FooterLink key={l.label} href={l.href} label={l.label} />
-            ))}
-          </div>
-          <div className="flex flex-col justify-center lg:gap-[10px]">
-            <p className="mb-1 font-bogle text-[21px] uppercase leading-[25.2px] text-muted lg:mb-0">Socials</p>
-            {socialLinks.map((l) => (
-              <FooterLink key={l.label} href={l.href} label={l.label} external />
             ))}
           </div>
         </div>
       </div>
 
-      <motion.div
-        className="w-full"
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ type: "spring", stiffness: 120, damping: 30 }}
-      >
+      <div className="w-full">
         <Marquee speed={90} gap={100}>
           <div className="flex items-center gap-[100px]">
             <p className="whitespace-nowrap font-bogle text-[clamp(96px,25.5vw,367px)] leading-[0.8] tracking-[0.01em] text-white">
               SEN STUDIO
             </p>
-            <span className="block h-[clamp(20px,4.2vw,60px)] w-[clamp(20px,4.2vw,60px)] rounded-full bg-white" />
+            <Image
+              src="/images/lotus-logo.png"
+              alt=""
+              width={60}
+              height={60}
+              className="h-[clamp(20px,4.2vw,60px)] w-[clamp(20px,4.2vw,60px)] object-contain"
+            />
           </div>
         </Marquee>
-      </motion.div>
+      </div>
 
       <Banner text={footerBannerText} />
     </footer>

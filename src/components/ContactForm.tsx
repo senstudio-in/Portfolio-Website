@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import SendButton from "./SendButton";
 
-const budgets = ["< $1,000", "$1,000 - $5,000", "$5,000 - $10,000", "$10,000 - $20,000", "> $20,000"];
+const budgets = ["< $500", "< $1,000", "$1,000 - $2,000", "$2,000 - $5,000", "$5,000 - $10,000", "> $10,000"];
 
 const label = "text-[20px] font-medium leading-6 text-white";
 const field =

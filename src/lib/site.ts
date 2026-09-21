@@ -4,8 +4,8 @@ export const SITE_URL = "https://www.arghyasen.in";
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about-us" },
   { label: "Work", href: "/works" },
+  { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -23,7 +23,7 @@ export const footerBannerText = "DESIGN THAT MAKES SEN(SE) ✹ WE ADD SEN(SE) TO
 
 export const images = {
   logo: img("BFnLC4mlhagUStgR5XGhUrfLv0.png"),
-  heroGif: img("yYJYmRvaukR5cTaRkjXt3hqWEM.gif"),
+  heroGif: img("hero-animation.webp"),
   clientStrip: img("8CEEfVNEQl1nWH4oMindYynNqio.png"),
   aboutPortrait: img("TQyETFye6Tb80SOVo1866uncM.jpg"),
   arrowLeft: img("6tTbkXggWgQCAJ4DO2QEdXXmgM.svg"),
@@ -60,24 +60,24 @@ export const services = [
 export const testimonials = [
   {
     quote:
-      "We came in with a product — they gave us a story. Their ability to translate design language into emotion was exactly what we needed.",
-    name: "Natalia Voss",
-    company: "Varo Studio",
-    avatar: img("bUYISt4Sq2NJmFUAuFX0NrH4U.png"),
+      "The best art director a designer could ask for. Someone with a clear vision of what he wants to make and an incredibly refined palate to go with it. I've learnt a great deal working with someone so experienced.",
+    name: "Parinith Ramakrishnan",
+    company: "Designer",
+    avatar: img("parinith-ramakrishnan.png"),
   },
   {
     quote:
-      "They took our product and gave it a pulse. Every detail felt intentional — from the visuals to the voice. It was like working with a design partner, not just an agency.",
-    name: "Daniel Rohe",
-    company: "AURIX Audio",
-    avatar: img("ODYBnGNYcs0poVBz1IitowCnYg.png"),
+      "Arghya Sen is one of the best design talents I've worked with, and we've been collaborating for over five years. From projects for Chelsea, Real Madrid and Sevilla to our own IPs like Travellers Guide to Indian Football and Roots to Boots, he's the designer I trust to find the design language of each project. Creative, professional and adaptable, Arghya is a pleasure to work with, and I'll continue working with him for years to come.",
+    name: "Johnson Kanjirathingal",
+    company: "Founder, Sportfolio Productions LLP",
+    avatar: img("johnson-kanjirathingal.jpeg"),
   },
   {
     quote:
-      "It felt like a creative partnership from day one. The team translated our vision into something even more refined than we imagined — bold, modern, and beautiful.",
-    name: "Isabelle Marek",
-    company: "NOIR COSMETICS",
-    avatar: img("cUCXwQyAmbfpxDNLjJBOMsnjGjw.png"),
+      "Arghya is a creative by nature. He has impeccable taste when it comes to visuals and always has a finger on the pulse when it comes to pop culture. Having worked with him for a good 3–4 years now, I can comfortably say that he’s one of the best designers I’ve worked with and he’d step up any sports team or agency’s design.",
+    name: "Ankush Sharma",
+    company: "Creative Head, EDP",
+    avatar: img("ankush-sharma.jpeg"),
   },
   {
     quote:

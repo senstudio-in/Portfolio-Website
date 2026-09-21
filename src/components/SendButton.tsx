@@ -9,13 +9,13 @@ function ArrowUpRight({ className = "" }: { className?: string }) {
 }
 
 const shell =
-  "group flex h-[54px] w-full max-w-[335px] items-center justify-between rounded-[99px] bg-[#0f0f0f] py-[3px] pl-[15px] pr-[3px] disabled:opacity-60";
+  "group flex h-[54px] w-full max-w-[335px] items-center justify-between rounded-[99px] bg-[#0f0f0f] py-[3px] pl-[15px] pr-[3px] transition-colors duration-300 hover:bg-white disabled:opacity-60";
 
 function Inner({ label }: { label: string }) {
   return (
     <>
-      <span className="font-bogle text-[23px] uppercase leading-6 tracking-[1.5px] text-white">{label}</span>
-      <span className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-black text-white">
+      <span className="font-bogle text-[23px] uppercase leading-6 tracking-[1.5px] text-white transition-colors duration-300 group-hover:text-black">{label}</span>
+      <span className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-black group-hover:text-white">
         <ArrowUpRight className="h-[18px] w-[18px] transition-transform duration-500 ease-[cubic-bezier(0.44,0,0.56,1)] group-hover:-translate-y-6 group-hover:translate-x-6" />
         <ArrowUpRight className="absolute h-[18px] w-[18px] -translate-x-6 translate-y-6 transition-transform duration-500 ease-[cubic-bezier(0.44,0,0.56,1)] group-hover:translate-x-0 group-hover:translate-y-0" />
       </span>

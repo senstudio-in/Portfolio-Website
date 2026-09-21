@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Pill from "@/components/Pill";
 import SendButton from "@/components/SendButton";
-import VideoPoster from "@/components/VideoPoster";
 import { Reveal } from "@/components/Reveal";
 import { img } from "@/lib/site";
 
@@ -16,25 +15,26 @@ export default function AboutPage() {
       {/* Portrait + playlist */}
       <section className="flex w-full justify-center bg-[#0f0f0f] px-5 py-[115px] md:px-[60px]">
         <div className="flex w-full max-w-[1069px] flex-col items-center gap-[25px] md:flex-row md:items-start">
-          <Reveal y={30} className="relative aspect-[522/801] w-full max-w-[522px] overflow-hidden rounded-[25px]">
+          <div className="relative aspect-[522/801] w-full max-w-[522px] overflow-hidden rounded-[25px] [contain:paint]">
             <Image
-              src={img("YqYozd3mr4dfqjep9IYFI09jQ.gif")}
+              src={img("about-portrait-animation.webp")}
               alt="Arghya Sen holding a Sen Studio card"
               fill
               unoptimized
               priority
+              decoding="async"
               className="object-cover"
             />
-          </Reveal>
+          </div>
 
           <div className="flex w-full max-w-[522px] flex-col items-center gap-12">
-            <div className="flex w-full justify-center pt-10">
+            <div className="flex w-full justify-center pt-4">
               <Image
-                src={img("5P5sVt9ukWSeLZWijBGd07IZs.png")}
+                src={img("arghya-signature-latest.png")}
                 alt="Arghya Sen signature"
-                width={159}
-                height={92}
-                className="h-[92px] w-[159px] object-contain"
+                width={180}
+                height={104}
+                className="h-[104px] w-[180px] object-contain"
               />
             </div>
             <p className="max-w-[418px] text-center text-[22px] leading-[1.3] text-white md:text-[26px]">
@@ -52,7 +52,7 @@ export default function AboutPage() {
       </section>
 
       {/* Title, video and "who we are" share one column so their edges line up */}
-      <div className="flex w-full max-w-[1336px] flex-col gap-14 px-5 pb-[120px] pt-20 md:gap-16 md:px-10 md:pb-[156px] md:pt-[140px] lg:px-5">
+      <div className="flex w-full max-w-[1069px] flex-col gap-14 px-5 pb-[120px] pt-20 md:gap-16 md:px-0 md:pb-[156px] md:pt-[140px]">
         <Reveal y={30} className="flex flex-col gap-6">
           <Pill>About</Pill>
           <div className="grid gap-6 md:grid-cols-2 md:items-center md:gap-10">
@@ -84,18 +84,14 @@ export default function AboutPage() {
           </div>
         </Reveal>
 
-        <Reveal y={40} amount={0.2}>
-          <VideoPoster poster={img("kq53yA9vFmvchCGCMCoO8znFKwY.png")} youtubeId="2F9LOz0qky4" />
-        </Reveal>
-
         <div className="grid gap-10 pt-4 md:grid-cols-2 md:items-end">
           <div className="flex max-w-[360px] flex-col gap-[18px] font-inter text-[16px] leading-[25.6px] tracking-[-0.32px] text-white">
             <Pill>Who we are</Pill>
             <p>Small studio. Unreasonably high standards.</p>
             <p>Sen Studio is a Art Studio based in Bangalore. Founded by Arghya Sen</p>
           </div>
-          <div className="md:justify-self-end">
-            <SendButton href="/contact" />
+          <div className="md:justify-self-start">
+            <SendButton href="/contact" label="Contact" />
           </div>
         </div>
       </div>

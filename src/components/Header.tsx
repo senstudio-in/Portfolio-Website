@@ -12,13 +12,18 @@ const headerLinks = navLinks.filter((l) => l.href !== "/");
 
 export function Banner({ text }: { text: string }) {
   return (
-    <div className="relative z-[2] flex h-[26px] w-full items-center bg-brand">
+    <motion.div
+      className="relative z-[2] flex h-[26px] w-full items-center bg-brand"
+      initial={{ opacity: 0.001, y: -26 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: "spring", stiffness: 258, damping: 75, mass: 1 }}
+    >
       <Marquee speed={40} className="w-full">
         <p className="whitespace-pre font-inter text-[11px] leading-[13.2px] tracking-[0.99px] text-white">
           {text}
         </p>
       </Marquee>
-    </div>
+    </motion.div>
   );
 }
 
@@ -26,12 +31,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.header
-      className="relative z-10 w-full"
-      initial={{ opacity: 0.001, y: -150 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ type: "spring", stiffness: 258, damping: 75, mass: 1 }}
-    >
+    <header className="relative z-10 w-full">
       <nav
         aria-label="Primary"
         className="flex w-full flex-col items-center gap-[29px] bg-ink pb-[37px]"
@@ -39,7 +39,7 @@ export default function Header() {
         <Banner text={bannerText} />
 
         <div className="flex h-[17px] w-full items-center justify-between px-5 md:justify-evenly md:px-0">
-          <Link href="/" className="flex items-center gap-[10px]" aria-label="Sen Studio home">
+          <Link href="/" className="flex items-center" aria-label="Sen Studio home">
             <Image
               src={images.logo}
               alt=""
@@ -48,9 +48,6 @@ export default function Header() {
               priority
               className="h-[39px] w-[50px] object-cover"
             />
-            <span className="font-bogle text-[33px] uppercase leading-[39.6px] text-white">
-              Sen Studio
-            </span>
           </Link>
 
           <ul className="hidden items-center gap-6 md:flex">
@@ -109,6 +106,6 @@ export default function Header() {
           )}
         </AnimatePresence>
       </nav>
-    </motion.header>
+    </header>
   );
 }
