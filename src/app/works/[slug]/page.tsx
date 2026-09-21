@@ -244,6 +244,12 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
         </Reveal>
       ))}
 
+      {project.episode3 && (
+        <Reveal className="flex w-full justify-center" amount={0.1}>
+          <SlotImage slot={project.episode3} alt={`${project.title} — Hyderabad episode 3 thumbnail`} />
+        </Reveal>
+      )}
+
       {project.legends && (
         <section className="flex w-full max-w-[1292px] flex-col gap-5">
           <h2 className="font-bebas text-[33px] leading-none tracking-[-0.66px] text-white">{project.legends.heading}</h2>
@@ -278,12 +284,6 @@ export default async function WorkPage({ params }: PageProps<"/works/[slug]">) {
       ) : suppressEmptyBanners ? null : (
         <div aria-hidden className="h-[200px]" />
       ))}
-
-      {project.episode3 && (
-        <Reveal className="flex w-full justify-center" amount={0.1}>
-          <SlotImage slot={project.episode3} alt={`${project.title} — Hyderabad episode 3 thumbnail`} />
-        </Reveal>
-      )}
 
       {!isChelsea && (project.slug === "sevilla-fc" ? (
         <div className="grid w-full max-w-[1292px] grid-cols-1 gap-5 md:grid-cols-2">

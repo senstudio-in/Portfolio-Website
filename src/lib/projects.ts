@@ -104,7 +104,6 @@ export const projects: Project[] = [
       heading: "MATCHDAY CREaTIVES",
       body: "These creatives were developed for Sevilla FC’s matchday communications, spanning both global and India-focused campaigns. Some pieces were created for the club’s global channels, including UEFA Europa League matchdays, while others were developed as part of the India Virtual Tour initiative, specifically targeting Sevilla FC’s fanbase in India.",
     },
-    episode3: s("tgif-hyderabad-episode-3.jpg", 1920, 1080, "cover"),
     grid: sharedGrid,
     continuation: {
       title: "Sevilla FC Creatives",
@@ -170,6 +169,7 @@ export const projects: Project[] = [
       s("j9mlms1dxpFnITjGxAYP204Waw.jpg", 1292, 928, "cover"),
       s("UmCgoOg2O2YFxAGjBECEdsGinSc.jpg", 1292, 862, "cover"),
     ],
+    episode3: s("tgif-hyderabad-episode-3.jpg", 1920, 1080, "cover"),
     process: {
       heading: "The Creative Process",
       body: [
