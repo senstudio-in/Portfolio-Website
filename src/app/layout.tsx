@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   },
   description:
     "Sen Studio is an art studio in Bengaluru led by Arghya Sen — art direction, visual design, pre & post production and UI/UX.",
+  openGraph: {
+    title: "Sen Studio — Design that makes Sen(se)",
+    description: "Art direction, visual design, and digital experiences by Arghya Sen.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Sen Studio — Design that makes Sen(se)" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sen Studio — Design that makes Sen(se)",
+    description: "Art direction, visual design, and digital experiences by Arghya Sen.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
