@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import PillButton from "../PillButton";
 
 export default function Hero() {
-  const cursorRef = useRef<HTMLDivElement>(null);
+  const cursorRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [cursorVisible, setCursorVisible] = useState(false);
 
   function moveCursor(event: React.PointerEvent<HTMLElement>) {
@@ -17,10 +17,8 @@ export default function Hero() {
     }
 
     const bounds = event.currentTarget.getBoundingClientRect();
-    cursorRef.current?.style.setProperty(
-      "transform",
-      `translate3d(${event.clientX - bounds.left}px, ${event.clientY - bounds.top}px, 0) translate(-50%, -50%)`,
-    );
+    const transform = `translate3d(${event.clientX - bounds.left}px, ${event.clientY - bounds.top}px, 0) translate(-50%, -50%)`;
+    cursorRefs.current.forEach((cursor) => cursor?.style.setProperty("transform", transform));
     setCursorVisible(true);
   }
 
@@ -40,13 +38,17 @@ export default function Hero() {
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
-      <div
-        ref={cursorRef}
-        aria-hidden
-        className={`pointer-events-none absolute left-0 top-0 z-[1] hidden h-24 w-24 bg-white mix-blend-difference transition-opacity duration-150 md:block ${
-          cursorVisible ? "opacity-100" : "opacity-0"
-        }`}
-      />
+      {["h-16 w-16 opacity-20 duration-300", "h-20 w-20 opacity-45 duration-200", "h-24 w-24 opacity-100 duration-100"].map((size, index) => (
+        <div
+          key={size}
+          ref={(element) => { cursorRefs.current[index] = element; }}
+          aria-hidden
+          style={{ backdropFilter: "grayscale(1) invert(1)" }}
+          className={`pointer-events-none absolute left-0 top-0 hidden bg-white/[0.02] transition-[transform,opacity] ease-out md:block ${size} ${
+            cursorVisible ? "" : "!opacity-0"
+          }`}
+        />
+      ))}
       <div className="relative flex h-[min(500px,70%)] flex-col items-center justify-end">
         <PillButton href="/contact" className="z-[2] cursor-pointer">
           Let&apos;s Collaborate
