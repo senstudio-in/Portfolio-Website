@@ -7,7 +7,7 @@ import { img } from "@/lib/site";
 
 export const metadata: Metadata = { title: "About" };
 
-const avatars = ["Ea6ye7BRIaekx7KudUZyTgc0rZA.png", "zPIpcv6oKzQAHaBM8Rgo6iVvX8.png", "EJCR8AHI2OD13jl8E1jrEh9Jbbo.png"];
+const avatars = ["about-team-1.webp", "about-team-2.webp", "about-team-3.webp"];
 
 export default function AboutPage() {
   return (
