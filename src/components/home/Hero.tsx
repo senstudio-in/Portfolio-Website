@@ -38,7 +38,7 @@ export default function Hero() {
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
-      {["h-24 w-24 opacity-35 duration-300", "h-24 w-24 opacity-100 duration-100"].map((size, index) => (
+      {["h-24 w-24 opacity-100 duration-100"].map((size, index) => (
         <div
           key={size}
           ref={(element) => { cursorRefs.current[index] = element; }}
