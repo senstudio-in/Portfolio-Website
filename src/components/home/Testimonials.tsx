@@ -55,7 +55,6 @@ export default function Testimonials() {
       <Reveal y={30} className="flex flex-col gap-6">
         <ul
           ref={trackRef}
-          data-lenis-prevent
           className="no-scrollbar flex snap-x snap-mandatory gap-[17px] overflow-x-auto overscroll-x-contain"
         >
           {testimonials.map((t) => (
