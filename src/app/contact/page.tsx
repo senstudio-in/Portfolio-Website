@@ -5,7 +5,12 @@ import ContactForm from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { img } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = {
+  title: "Contact a Bangalore Art Director & Designer",
+  description:
+    "Get in touch with Sen Studio in Bangalore for art direction, visual design, photography, videography, editing and digital experiences.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (

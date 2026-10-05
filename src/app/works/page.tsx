@@ -3,7 +3,12 @@ import WorkCard, { UpcomingWorkCard } from "@/components/WorkCard";
 import { Reveal } from "@/components/Reveal";
 import { projects } from "@/lib/projects";
 
-export const metadata: Metadata = { title: "Work" };
+export const metadata: Metadata = {
+  title: "Work | Bangalore Art Direction & Visual Design Portfolio",
+  description:
+    "Selected art direction, visual design, branding and content work by Sen Studio, a Bangalore creative studio led by Arghya Sen.",
+  alternates: { canonical: "/works" },
+};
 
 export default function WorksPage() {
   return (

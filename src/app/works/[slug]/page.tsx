@@ -16,7 +16,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/works/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  return project ? { title: project.title } : {};
+  return project
+    ? {
+        title: `${project.title} | Sen Studio Portfolio`,
+        description: `${project.title}: ${project.tag}. A selected project by Sen Studio, a Bangalore creative studio led by Arghya Sen.`,
+        alternates: { canonical: `/works/${project.slug}` },
+      }
+    : {};
 }
 
 const body = "text-[16px] leading-[25.6px] tracking-[-0.32px] text-white";

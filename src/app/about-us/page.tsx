@@ -5,7 +5,12 @@ import SendButton from "@/components/SendButton";
 import { Reveal } from "@/components/Reveal";
 import { img } from "@/lib/site";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = {
+  title: "Arghya Sen | Bangalore Art Director & Designer",
+  description:
+    "Meet Arghya Sen, the Bangalore-based art director and designer behind Sen Studio. Explore his approach to visual storytelling, design and creative direction.",
+  alternates: { canonical: "/about-us" },
+};
 
 const avatars = ["about-team-1.webp", "about-team-2.webp", "about-team-3.webp"];
 

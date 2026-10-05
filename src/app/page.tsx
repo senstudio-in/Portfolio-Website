@@ -8,6 +8,7 @@ import Testimonials from "@/components/home/Testimonials";
 export default function Home() {
   return (
     <main className="relative flex w-full flex-col items-center gap-[35px] overflow-clip bg-page pb-[97px]">
+      <h1 className="sr-only">Arghya Sen — Bangalore art director, designer and founder of Sen Studio</h1>
       <Hero />
       <ClientLogos />
       <WorksGrid />
