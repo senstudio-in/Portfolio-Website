@@ -13,7 +13,7 @@ export default function PillButton({
   return (
     <Link
       href={href}
-      className={`group relative inline-flex items-center justify-center rounded-[13px] bg-card px-[22px] py-[10px] transition-transform duration-300 hover:scale-[1.03] ${className}`}
+      className={`group relative inline-flex items-center justify-center rounded-[13px] bg-card px-[22px] py-[10px] transition-[transform,background-color] duration-300 hover:scale-[1.03] hover:bg-brand ${className}`}
     >
       <RollText
         className="whitespace-nowrap text-[16px] leading-6 tracking-[-0.48px] text-white"

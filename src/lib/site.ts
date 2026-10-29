@@ -79,18 +79,4 @@ export const testimonials = [
     company: "Creative Head, EDP",
     avatar: img("ankush-sharma.jpeg"),
   },
-  {
-    quote:
-      "The process was seamless. They understood our product and delivered a launch that was as precise and minimal as the keyboard itself.",
-    name: "Eric Lehnert",
-    company: "HALTEN",
-    avatar: img("Ww2EkowT5L9ffLHFKu8TQ3QUViA.png"),
-  },
-  {
-    quote:
-      "Working with them was a breath of fresh air. Calm, clear, and deeply creative — they gave our brand space to breathe while making it sharper than ever.",
-    name: "Rina Hanari",
-    company: "LUMO",
-    avatar: img("YFJF9dEI7kkLKN0344KKDVkj9Nw.png"),
-  },
 ];
