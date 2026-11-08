@@ -10,24 +10,24 @@ const bio =
 export default function AboutBlurb() {
   return (
     <section aria-label="About" className="relative z-0 flex w-full flex-col items-center justify-center gap-[46px] px-5 py-[27px]">
-      <div className="relative z-[3] flex w-full max-w-[1150px] flex-col items-center justify-center gap-8 py-[15px] lg:flex-row">
-        <CornerFrame className="h-[450px] w-full max-w-[400px] shrink-0 rounded-[6px]">
+      <div className="relative z-[3] flex w-full max-w-[1150px] flex-col items-center justify-center gap-8 py-[15px] lg:flex-row min-[1920px]:max-w-[1800px] min-[1920px]:gap-[clamp(64px,8vw,180px)]">
+        <CornerFrame className="h-[450px] w-full max-w-[400px] shrink-0 rounded-[6px] min-[1920px]:h-[560px] min-[1920px]:max-w-[500px]">
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src={images.aboutPortrait}
               alt="Arghya Sen"
               fill
-              sizes="368px"
+              sizes="(min-width: 1920px) 500px, 368px"
               className="object-cover"
             />
           </div>
         </CornerFrame>
 
-        <div className="flex w-full flex-col gap-[45px] py-5 md:max-w-[640px] lg:max-w-[718px]">
+        <div className="flex w-full flex-col gap-[45px] py-5 md:max-w-[640px] lg:max-w-[718px] min-[1920px]:max-w-[920px]">
           <div className="flex flex-col justify-center gap-[58px] overflow-hidden">
             <ScrollWords
               text={bio}
-              className="text-left text-[22px] leading-[1.8] md:text-[26px]"
+              className="text-left text-[22px] leading-[1.8] md:text-[26px] min-[1920px]:text-[32px]"
             />
             <div>
               <PillButton href="/about-us">More About Me</PillButton>

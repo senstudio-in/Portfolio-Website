@@ -4,17 +4,21 @@ import WorksGrid from "@/components/home/WorksGrid";
 import AboutBlurb from "@/components/home/AboutBlurb";
 import Services from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonials";
+import CursorNoise from "@/components/home/CursorNoise";
 
 export default function Home() {
   return (
-    <main className="relative flex w-full flex-col items-center gap-[35px] overflow-clip bg-page pb-[97px]">
-      <h1 className="sr-only">Arghya Sen — Bangalore art director, designer and founder of Sen Studio</h1>
-      <Hero />
-      <ClientLogos />
-      <WorksGrid />
-      <AboutBlurb />
-      <Services />
-      <Testimonials />
-    </main>
+    <>
+      <main className="relative flex w-full flex-col items-center gap-[35px] overflow-clip bg-page pb-[97px]">
+        <h1 className="sr-only">Arghya Sen — Bangalore art director, designer and founder of Sen Studio</h1>
+        <Hero />
+        <ClientLogos />
+        <WorksGrid />
+        <AboutBlurb />
+        <Services />
+        <Testimonials />
+      </main>
+      <CursorNoise />
+    </>
   );
 }

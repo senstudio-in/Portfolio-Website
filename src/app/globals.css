@@ -72,6 +72,36 @@ html.lenis body {
   );
 }
 
+.cursor-noise {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  display: none;
+  height: 104px;
+  width: 104px;
+  border-radius: 26px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.015);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23noise)' opacity='.72'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.08), 0 0 20px 10px rgba(0, 0, 0, 0.22);
+  mix-blend-mode: soft-light;
+  transition: opacity 180ms ease-out;
+  will-change: transform, opacity;
+}
+
+.cursor-noise--visible {
+  opacity: 0.38;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-noise {
+    display: block;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

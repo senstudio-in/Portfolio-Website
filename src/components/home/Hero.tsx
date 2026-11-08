@@ -24,6 +24,7 @@ export default function Hero() {
 
   return (
     <section
+      id="landing-video"
       className="relative flex h-[clamp(520px,53vw,max(764px,85vh))] w-full cursor-none flex-col items-center justify-center overflow-clip"
       onPointerMove={moveCursor}
       onPointerLeave={() => setCursorVisible(false)}
