@@ -83,7 +83,7 @@ export const testimonials = [
     quote:
       "Visual aesthetic 🤝 Meaningful storytelling. SenStudio provides both in abundance—you’re not just hiring someone to do what you want them to do, you’re getting someone who will work with you, not just for you. From ideation to feedback and execution, SenStudio is a complete package… and more.",
     name: "Arjun Kalra",
-    company: "Director & Cinematographer",
+    company: "Director",
     avatar: img("arjun-kalra.png"),
   },
 ];
