@@ -9,25 +9,25 @@ const bio =
 
 export default function AboutBlurb() {
   return (
-    <section aria-label="About" className="relative z-0 flex w-full flex-col items-center justify-center gap-[46px] px-5 py-[27px]">
-      <div className="relative z-[3] flex w-full max-w-[1150px] flex-col items-center justify-center gap-8 py-[15px] lg:flex-row min-[1920px]:max-w-[1800px] min-[1920px]:gap-[clamp(64px,8vw,180px)]">
-        <CornerFrame className="h-[450px] w-full max-w-[400px] shrink-0 rounded-[6px] min-[1920px]:h-[560px] min-[1920px]:max-w-[500px]">
+    <section aria-label="About" className="relative z-0 flex w-full flex-col items-center justify-center gap-[46px] px-5 py-[27px] min-[1200px]:px-[clamp(48px,6vw,144px)]">
+      <div className="relative z-[3] flex w-full max-w-[1150px] flex-col items-center justify-center gap-8 py-[15px] lg:flex-row min-[1200px]:max-w-[1800px] min-[1200px]:gap-[clamp(48px,6vw,120px)]">
+        <CornerFrame className="h-[450px] w-full max-w-[400px] shrink-0 rounded-[6px] min-[1200px]:h-[520px] min-[1200px]:max-w-[480px]">
           <div className="relative h-full w-full overflow-hidden">
             <Image
               src={images.aboutPortrait}
               alt="Arghya Sen"
               fill
-              sizes="(min-width: 1920px) 500px, 368px"
+              sizes="(min-width: 1200px) 480px, 368px"
               className="object-cover"
             />
           </div>
         </CornerFrame>
 
-        <div className="flex w-full flex-col gap-[45px] py-5 md:max-w-[640px] lg:max-w-[718px] min-[1920px]:max-w-[920px]">
+        <div className="flex w-full flex-col gap-[45px] py-5 md:max-[1199px]:max-w-[640px] lg:max-[1199px]:max-w-[718px] min-[1200px]:max-w-[760px]">
           <div className="flex flex-col justify-center gap-[58px] overflow-hidden">
             <ScrollWords
               text={bio}
-              className="text-left text-[22px] leading-[1.8] md:text-[26px] min-[1920px]:text-[32px]"
+              className="text-left text-[22px] leading-[1.8] md:max-[1199px]:text-[26px] min-[1200px]:text-[30px]"
             />
             <div>
               <PillButton href="/about-us">More About Me</PillButton>

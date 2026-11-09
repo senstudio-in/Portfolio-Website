@@ -51,7 +51,7 @@ export default function Testimonials() {
     "flex h-11 w-11 items-center justify-center rounded-full bg-brand-dark outline-none transition-[background-color,opacity,transform] duration-300 ease-[cubic-bezier(0.44,0,0.56,1)] enabled:hover:bg-brand-card enabled:active:scale-95 focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-page disabled:cursor-default disabled:opacity-30";
 
   return (
-    <section aria-label="Testimonials" className="flex w-full max-w-[1122px] flex-col gap-14 px-5 md:px-10 xl:px-0 min-[1920px]:max-w-[1800px]">
+    <section aria-label="Testimonials" className="flex w-full max-w-[1122px] flex-col gap-14 px-5 md:max-[1199px]:px-10 min-[1200px]:max-w-[1800px] min-[1200px]:px-[clamp(48px,6vw,144px)]">
       <Reveal y={30} className="flex flex-col gap-6">
         <ul
           ref={trackRef}

@@ -21,7 +21,7 @@ export default function WorksGrid() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 130, damping: 30, mass: 0.1, delay: 1 }}
     >
-      <div className="grid w-full max-w-[1442px] grid-cols-1 gap-x-5 gap-y-[60px] py-10 md:grid-cols-[repeat(2,minmax(0,611px))] md:justify-center md:px-[99px] md:py-[60px] min-[1920px]:max-w-[2200px] min-[1920px]:grid-cols-[repeat(3,minmax(0,1fr))] min-[1920px]:px-[clamp(48px,6vw,160px)]">
+      <div className="grid w-full max-w-[1442px] grid-cols-1 gap-x-5 gap-y-[60px] py-10 md:max-[1199px]:grid-cols-[repeat(2,minmax(0,611px))] md:max-[1199px]:justify-center md:max-[1199px]:px-[99px] md:py-[60px] min-[1200px]:max-w-[2200px] min-[1200px]:grid-cols-[repeat(3,minmax(0,1fr))] min-[1200px]:gap-x-6 min-[1200px]:gap-y-[72px] min-[1200px]:px-[clamp(48px,6vw,160px)]">
         {homepageProjects.map((p, i) => (
           <WorkCard
             key={p.slug}
