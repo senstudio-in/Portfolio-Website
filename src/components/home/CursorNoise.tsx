@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const CURSOR_SIZE = 130;
+const CURSOR_SIZE = 94;
 const FOLLOW_SPEED = 0.1;
 
 export default function CursorNoise() {
@@ -31,18 +31,23 @@ export default function CursorNoise() {
       cursor.classList.toggle("cursor-glow--visible", visible);
     };
 
-    const isOutsideLandingVideo = () => {
-      if (!pointerPosition) return false;
+    const updateCursorSurface = () => {
+      if (!pointerPosition) {
+        setVisibility(false);
+        cursor.classList.remove("cursor-glow--footer");
+        return;
+      }
 
       const elementUnderPointer = document.elementFromPoint(
         pointerPosition.x,
         pointerPosition.y,
       );
+      const isOnLandingVideo = Boolean(elementUnderPointer?.closest("#landing-video"));
+      const isOnFooter = Boolean(elementUnderPointer?.closest("footer"));
 
-      return !elementUnderPointer?.closest("#landing-video");
+      cursor.classList.toggle("cursor-glow--footer", isOnFooter);
+      setVisibility(!isOnLandingVideo);
     };
-
-    const updateVisibility = () => setVisibility(isOutsideLandingVideo());
 
     const moveCursor = (event: PointerEvent) => {
       if (event.pointerType !== "mouse") return;
@@ -50,7 +55,7 @@ export default function CursorNoise() {
       targetX = event.clientX - CURSOR_SIZE / 2;
       targetY = event.clientY - CURSOR_SIZE / 2;
       pointerPosition = { x: event.clientX, y: event.clientY };
-      updateVisibility();
+      updateCursorSurface();
     };
 
     const animate = () => {
@@ -60,22 +65,25 @@ export default function CursorNoise() {
       frameId = window.requestAnimationFrame(animate);
     };
 
-    const hideCursor = () => setVisibility(false);
+    const hideCursor = () => {
+      setVisibility(false);
+      cursor.classList.remove("cursor-glow--footer");
+    };
     const handlePointerOut = (event: PointerEvent) => {
       if (!event.relatedTarget) hideCursor();
     };
     const handleLandingVideoEnter = (event: PointerEvent) => {
-      if (event.pointerType === "mouse") setVisibility(false);
+      if (event.pointerType === "mouse") updateCursorSurface();
     };
     const handleLandingVideoLeave = (event: PointerEvent) => {
       if (event.pointerType === "mouse" && event.relatedTarget) {
-        setVisibility(true);
+        updateCursorSurface();
       }
     };
 
     document.addEventListener("pointermove", moveCursor, { passive: true });
     document.addEventListener("pointerout", handlePointerOut);
-    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("scroll", updateCursorSurface, { passive: true });
     window.addEventListener("blur", hideCursor);
     landingVideo?.addEventListener("pointerenter", handleLandingVideoEnter);
     landingVideo?.addEventListener("pointerleave", handleLandingVideoLeave);
@@ -84,7 +92,7 @@ export default function CursorNoise() {
     return () => {
       document.removeEventListener("pointermove", moveCursor);
       document.removeEventListener("pointerout", handlePointerOut);
-      window.removeEventListener("scroll", updateVisibility);
+      window.removeEventListener("scroll", updateCursorSurface);
       window.removeEventListener("blur", hideCursor);
       landingVideo?.removeEventListener("pointerenter", handleLandingVideoEnter);
       landingVideo?.removeEventListener("pointerleave", handleLandingVideoLeave);
